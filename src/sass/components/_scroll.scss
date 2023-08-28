@@ -1,0 +1,28 @@
+@use '../base/functions' as f;
+
+body{
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    
+    &::-webkit-scrollbar:vertical {
+        width:15px;
+    }
+    
+    &::-webkit-scrollbar-button:increment,&::-webkit-scrollbar-button {
+        display: none;
+    } 
+    
+    &::-webkit-scrollbar:horizontal {
+        height: 10px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: f.color('primary');
+        border-radius: 20px;
+        border: 5px solid f.color('white');
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 10px; 
+    }  
+}
