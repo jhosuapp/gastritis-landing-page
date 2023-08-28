@@ -5,12 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "tsc && vite build",
-    "build": "tsc && vite build"
+    "build": "tsc && vite build",
+    "deploy": "gh-pages -d public"
   },
   "devDependencies": {
     "sass": "^1.66.0",
     "swiper": "^9.3.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "gh-pages": "^6.0.0"
   }
 }
