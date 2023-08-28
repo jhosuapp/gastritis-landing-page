@@ -7,6 +7,8 @@
     left: 0;
     top: 0;
     border-bottom: 1px dashed f.color('primary');
+    z-index: 90;
+    background-color: f.color('white');
     &__logo{
         width: 170px;
         position: relative;
@@ -38,6 +40,7 @@
             border-radius: 100px;
             color: f.color('primary');
             transition: .5s ease all;
+            font-weight: 600;
             &.active{
                 background-color: f.color('primary');
                 color: f.color('white');

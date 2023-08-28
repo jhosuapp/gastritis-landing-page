@@ -17,6 +17,9 @@
                 height: 100%;
             }
         }
+        p{
+            margin: 30px 0 32.5px;
+        }
         .container-limit{
             position: absolute;
             display: flex;
@@ -38,5 +41,20 @@
     }
     .swiper-pagination-bullet.swiper-pagination-bullet-active{
         background-color: f.color('primary');
+    }
+}
+
+@media(max-width: f.breakpoints('ipad-small')){
+    .swiper-banner{
+        height: 500px;
+        .swiper-slide{
+            picture{    
+                height: 500px;
+                img{
+                    object-fit: cover;
+                    object-position: left;
+                }
+            }
+        }
     }
 }

@@ -1,11 +1,12 @@
 //PALETA DE COLORES
 $palette:(
     'white': #fff,
-    'primary': #A03CA6
+    'primary': #A03CA6,
+    'secondary': #585454
 );
 //BREAKPOINTS
 $breakpoints: (
-    'desktop': 1440px,
+    'desktop': 1580px,
     'laptop': 1280px,
     'laptop-small': 1100px,
     'ipad-big': 992px,
@@ -14,5 +15,5 @@ $breakpoints: (
 );
 //OTHERS
 $transition-duration: 0.3s;
-$limit-width: 1400px;
+$limit-width: 1350px;
 $header-height: 85.5px;

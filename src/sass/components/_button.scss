@@ -1,0 +1,33 @@
+@use '../base/functions' as f;
+
+.btn{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: f.color('primary');
+    color: f.color('white');
+    padding: 1.5rem 4rem;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-radius: 100px;
+    transition: .5s ease opacity;
+    &:hover{
+        opacity: .6;
+    }
+}
+
+@media(max-width: f.breakpoints('desktop')){
+    .btn{
+        padding: 1.25rem 3.5rem;
+        font-size: 1.7rem;
+    }
+}
+
+@media(max-width: f.breakpoints('ipad-small')){
+    .btn{
+        padding: 1rem 3rem;
+        font-size: 1.6rem;
+    }
+}

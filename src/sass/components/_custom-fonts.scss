@@ -1,0 +1,42 @@
+@use '../base/functions' as f;
+
+.ctm-fonts{
+    h1,h2,h3,h4,h5,h6,p{
+        color: f.color('secondary');
+        font-weight: 800;
+        b{
+            color: f.color('primary');
+            font-weight: 800;
+        }
+    }
+    p{
+        font-size: 1.9rem;
+        font-weight: 200;
+        line-height: 1.4;
+    }
+    h2{
+        font-size: 5rem;
+    }
+}
+
+@media(max-width: f.breakpoints('desktop')){
+    .ctm-fonts{
+        h2{
+            font-size: 4rem;
+        }
+        p{
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@media(max-width: f.breakpoints('ipad-small')){
+    .ctm-fonts{
+        h2{
+            font-size: 3rem;
+        }
+        p{
+            font-size: 1.7rem;
+        }
+    }
+}

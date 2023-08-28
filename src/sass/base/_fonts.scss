@@ -1,27 +1,20 @@
 @font-face {
-    font-family: 'test';
-    src: url("../fonts/test.ttf");
+    font-family: 'BMS Humanity';
+    src: url("../fonts/BMSHumanity-Regular.ttf");
     font-weight: 400;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'test';
-    src: url("../fonts/test.ttf");
-    font-weight: 500;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'test';
-    src: url("../fonts/test.ttf");
+    font-family: 'BMS Humanity';
+    src: url("../fonts/BMSHumanity-Bold.ttf");
     font-weight: 700;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'test';
-    src: url("../fonts/test.ttf");
+    font-family: 'BMS Humanity';
+    src: url("../fonts/BMSHumanity-ExtraBold.otf");
     font-weight: 800;
     font-display: swap;
 }
@@ -53,7 +46,7 @@ input,
 input::placeholder,
 ::before,
 ::after {
-    font-family: 'test', sans-serif;
+    font-family: 'BMS Humanity', sans-serif;
     font-weight: 400;
 }
 
