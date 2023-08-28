@@ -8,11 +8,17 @@ main{
     width: 90%;
     margin: 0 auto;
     max-width: v.$limit-width;
-    padding-top: 80px;
+    padding-top: 90px;
+}
+.container-top{
+    margin-top: 90px;
 }
 
 @media(max-width: f.breakpoints('ipad-big')){
     .container-limit{
-        padding-top: 50px;
+        padding-top: 60px;
+    }
+    .container-top{
+        margin-top: 60px;
     }
 }

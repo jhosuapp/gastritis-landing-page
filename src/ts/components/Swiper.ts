@@ -20,6 +20,29 @@ const SwiperLib = (()=>{
                 clickable: true
             },
         });
+
+        new Swiper(".swiper-causes", {
+            modules: [Navigation, Pagination],
+            slidesPerView: 1,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            breakpoints: {
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                },
+            }
+        });
     }
 
     /*

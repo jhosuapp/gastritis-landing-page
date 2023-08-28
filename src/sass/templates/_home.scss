@@ -24,13 +24,18 @@
             width: 50%;
             img{
                 width: 100%;
+                max-width: 550px;
             }
         }
+    }
+    &--reverse{
+        flex-direction: row-reverse;
     }
 }
 
 .lining__bg{
     position: relative;
+    z-index: -1;
     article{
         position: absolute;
         width: 100%;
@@ -40,17 +45,152 @@
         position: absolute;
         left: 0;
         top: 0;
-        width: 60%;
+        width: 50%;
     }
     .lining__bg--right{
         position: absolute;
         top: 0;
         right: 0;
-        width: 70%;
+        width: 80%;
+    }
+    &--treatment{
+        .lining__bg--right{
+            width: 45%;
+            top: 60vh;
+        }
+        .lining__bg--left{
+            width: 50%;
+            top: 80vh;
+        }
+    }
+}
+
+.causes{
+    article{
+        &:nth-child(1){
+            width: 100%;
+            background: rgb(222, 216, 216, 0.7);
+            border-radius: 15px;
+            padding: 30px 40px;
+        }
+        &:nth-child(2){
+            margin-top: 40px;
+        }
+        h2,h4{
+            text-align: center;
+        }
+    }
+}
+
+.cancer{
+    &__limit{
+        max-width: 60%;
+        p{
+            margin: 30px 0;
+        }
+    }
+    h2{
+        margin-bottom: 30px;
+    }
+    &__cards{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-top: 60px;
+        &__block{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+        }
+        &__item{
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            min-height: 300px;
+            flex: 1 400px;
+            cursor: pointer;
+            border-radius: 20px;
+            perspective: 1000px; 
+            .front, .back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 20px;
+            }
+            .front{
+                background-color: rgb(88, 84, 84, 0.66);
+                p{
+                    color: f.color('white');
+                    font-size: 7rem;
+                    font-weight: 800;
+                }
+            }
+            .back {
+                background-color: f.color('primary');
+                transform: rotateY(180deg);
+                p{
+                    color: f.color('white');
+                    width: 90%;
+                    max-width: 300px;
+                    margin: auto;
+                }
+            }
+            &.active{
+                .cancer__cards__block{
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+}
+
+.separator{
+    border: 2px solid f.color('primary');
+    text-align: center;
+    border-right: none;
+    border-left: none;
+    article{
+        padding: 50px 0;
     }
 }
 
 @media(max-width: f.breakpoints('ipad-big')){
+    .cancer{
+        &__limit{
+            max-width: 100%;
+            h2{
+                margin-top: 20px;
+            }
+        }
+        &__cards{
+            padding-top: 40px;
+            &__item{
+                .front{
+                    p{
+                        font-size: 5rem;
+                    }
+                }
+            }
+        }
+    }
+    .causes{
+        article{
+            &:nth-child(1){
+                padding: 30px 20px;
+            }
+        }
+    }    
     .lining{
         flex-direction: column;
         gap: 30px;

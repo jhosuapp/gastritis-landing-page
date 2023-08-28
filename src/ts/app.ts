@@ -1,9 +1,9 @@
 //Import styles
 import "../sass/main.scss";
 //Import components
-// import {loadExampleHandlers} from "./components/example";
 import {loadNavHandlers} from "./components/Nav";
 import {loadSwiperLibHandlers} from "./components/Swiper";
+import {loadCardsHandlers} from "./components/Cards";
 
 /*
 *Execute functions
@@ -11,4 +11,5 @@ import {loadSwiperLibHandlers} from "./components/Swiper";
 window.addEventListener('load', ()=>{
     loadNavHandlers();
     loadSwiperLibHandlers();
+    loadCardsHandlers();
 });
