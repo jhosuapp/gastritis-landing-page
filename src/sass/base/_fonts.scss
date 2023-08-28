@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'test';
+    src: url("../fonts/test.ttf");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'test';
+    src: url("../fonts/test.ttf");
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'test';
+    src: url("../fonts/test.ttf");
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'test';
+    src: url("../fonts/test.ttf");
+    font-weight: 800;
+    font-display: swap;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+li,
+label,
+option,
+th,
+td,
+tr,
+em,
+strong,
+b,
+div,
+input,
+input::placeholder,
+::before,
+::after {
+    font-family: 'test', sans-serif;
+    font-weight: 400;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+}

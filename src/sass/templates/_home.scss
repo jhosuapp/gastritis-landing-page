@@ -1,0 +1,28 @@
+@use '../base/functions' as fun;
+@use '../base/mixin' as mix;
+
+section{
+    background-color: fun.color('primary');
+    @include mix.flex;
+    height: 100vh;
+    width: 100%;
+    color: fun.color('white');
+    :is(h1, a){
+        color: fun.color('white');
+    }
+    h1{
+        font-size: 2rem;
+    }
+    a{
+        text-decoration: underline;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+@media(max-width: fun.breakpoints('ipad-small')){
+    section{
+        background-color: fun.color('black');
+    }
+}

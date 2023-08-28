@@ -1,0 +1,2 @@
+(function(e){typeof define=="function"&&define.amd?define(e):e()})(function(){"use strict";const e="",c=(()=>{const s=()=>{const n=document.querySelector("#header-hamburger"),t=document.querySelector(".header nav");n==null||n.addEventListener("click",()=>{n==null||n.classList.toggle("active"),t==null||t.classList.toggle("active")})};return{setHandleEvent:function(){try{s()}catch{}}}})(),o=()=>{c.setHandleEvent()};window.addEventListener("load",()=>{o()})});
+//# sourceMappingURL=mainscript.umd.cjs.map

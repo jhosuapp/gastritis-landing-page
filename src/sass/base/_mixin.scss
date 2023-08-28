@@ -1,0 +1,40 @@
+@mixin restart_button ($o: inherit, $b: none){
+    outline: $o;
+    border: $b;
+}
+
+@mixin restart_input ($o: inherit, $b: none, $bg: transparent){
+    outline: $o;
+    border: $b;
+    background-color: $bg;
+}
+
+@mixin transition ($td: 0.3s, $p: all, $ta: ease){
+    transition: $td $p $ta;
+}
+
+@mixin restarLink ($td: none, $color: color('primario')){
+    text-decoration: $td;
+    color: $color;
+}
+
+@mixin flex ($dp: flex, $jc: center, $ai: center){
+    display: $dp;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin restart_li ($ls: none){
+    list-style: $ls;
+}
+
+@mixin before_hover($bg: color('white')){
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 0;
+	background-color: $bg;
+	height: 2px;
+	@include transition($p: width);
+}
