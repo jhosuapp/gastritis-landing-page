@@ -15,6 +15,9 @@
             img{
                 width: 100%;
                 height: 100%;
+                object-fit: contain;
+                object-position: left;
+                background-color: f.color('white');
             }
         }
         p{
@@ -71,6 +74,36 @@
         }
     }
 }
+
+.swiper-cancer{
+    border-radius: 22.5px;
+    background-color: #DED8D8;
+    position: relative;
+    overflow: hidden;
+    .swiper-slide{
+        height: auto;
+        picture{
+            width: 100%;
+            border-radius: 22.5px 22.5px 0 0;
+            position: relative;
+            overflow: hidden;
+            display: block;
+        }
+        img{
+            width: 100%;
+            min-height: 350px;
+            max-height: 350px;
+            object-fit: cover;
+        }
+        h4{
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px 10px 60px;
+            background-color: #DED8D8;
+        }
+    }
+}
 @media(max-width: f.breakpoints('desktop')){
     .swiper-causes{
         .swiper-slide{
@@ -94,6 +127,16 @@
                     object-fit: cover;
                     object-position: left;
                 }
+            }
+        }
+    }
+}
+@media(max-width: f.breakpoints('mobile')){
+    .swiper-cancer{
+        .swiper-slide{
+            img{
+                min-height: 180px;
+                max-height: 180px;
             }
         }
     }

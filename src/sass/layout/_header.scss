@@ -6,15 +6,28 @@
     width: 100%;
     left: 0;
     top: 0;
-    border-bottom: 1px dashed f.color('primary');
+    // border-bottom: 1px dashed f.color('primary');
     z-index: 90;
     background-color: f.color('white');
+    &__progress{
+        width: 100%;
+        height: 3px;
+        background-color: f.color('primary');
+        transform: scaleX(0);
+        transform-origin: left;
+        animation-name: progress;
+        animation-timeline: scroll();
+    }
     &__logo{
         width: 170px;
         position: relative;
         display: block;
         img{
             width: 100%;
+            transition: .3s ease width;
+            &.active{
+                width: 70%;
+            }
         }
     }
     &__container{
@@ -128,5 +141,11 @@
                 font-size: 1.4rem;
             }
         }
+    }
+}
+
+@keyframes progress{
+    100%{
+        transform: scaleX(1);
     }
 }

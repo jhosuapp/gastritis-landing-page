@@ -13,11 +13,24 @@ const Nav = (()=>{
     }
 
     /*
+    *Efect scroll menu
+    */
+    const _NavScrollEfect = ()=>{
+        const getLogoNav = document.querySelector<HTMLElement>('.header .header__logo img');
+
+        window.addEventListener('scroll', ()=>{
+            const getPostionY : number = window.scrollY;
+            getPostionY > 0 ? getLogoNav?.classList.add('active') : getLogoNav?.classList.remove('active');
+        })
+    }
+
+    /*
     *Return childs functions
     */
     return{
         setHandleEvent: function(){
             try { _NavHamburger(); } catch (error) { }
+            try { _NavScrollEfect(); } catch (error) { }
         }
     }
 })();

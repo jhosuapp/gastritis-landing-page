@@ -43,6 +43,15 @@ const SwiperLib = (()=>{
                 },
             }
         });
+
+        new Swiper(".swiper-cancer", {
+            modules: [Navigation, Pagination],
+            slidesPerView: 1,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+        });
     }
 
     /*
