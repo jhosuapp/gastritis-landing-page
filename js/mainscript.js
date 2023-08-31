@@ -5,12 +5,12 @@ const Ce = (() => {
       a == null || a.classList.toggle("active"), n == null || n.classList.toggle("active");
     });
   }, t = () => {
-    const a = document.querySelectorAll(".header nav a"), n = document.querySelector(".header nav");
-    a.forEach((l) => {
-      l.addEventListener("click", () => {
-        n == null || n.classList.remove("active"), a.forEach((r) => {
-          r.classList.remove("active");
-        }), l.classList.add("active");
+    const a = document.querySelectorAll(".header nav a"), n = document.querySelector("#header-hamburger"), l = document.querySelector(".header nav");
+    a.forEach((r) => {
+      r.addEventListener("click", () => {
+        l == null || l.classList.remove("active"), n == null || n.classList.remove("active"), a.forEach((o) => {
+          o.classList.remove("active");
+        }), r.classList.add("active");
       });
     });
   }, s = () => {
