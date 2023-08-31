@@ -70,6 +70,7 @@
             max-height: 180px;
             img{
                 width: 95%;
+                aspect-ratio: 1/1;
             }
         }
     }
@@ -77,7 +78,7 @@
 
 .swiper-cancer{
     border-radius: 22.5px;
-    background-color: #DED8D8;
+    background-color: f.color('tertiary');
     position: relative;
     overflow: hidden;
     .swiper-slide{
@@ -100,7 +101,7 @@
             max-width: 900px;
             margin: auto;
             padding: 20px 10px 60px;
-            background-color: #DED8D8;
+            background-color: f.color('tertiary');
         }
     }
 }

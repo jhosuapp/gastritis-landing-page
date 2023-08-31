@@ -9,12 +9,11 @@ const SwiperLib = (()=>{
             modules: [Autoplay, Navigation, Pagination, EffectFade],
             slidesPerView: 1,
             spaceBetween: 20,
-            // loop: true,
             effect: "fade",
-            // autoplay: {
-            //     delay: 0,
-            //     disableOnInteraction: true,
-            // },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: true,
+            },
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true

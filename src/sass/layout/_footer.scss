@@ -1,0 +1,51 @@
+@use '../base/functions' as f;
+
+.footer{
+    padding: 80px;
+    background-color: f.color('primary');
+    .container{
+        display: flex;
+        justify-content: space-between;
+        img{
+            width: 250px;
+        }
+        div{
+            ul{
+                list-style: none;
+                color: f.color('white');
+                font-size: 1.6rem;
+                li{
+                    margin-bottom: 10px;
+                }
+                a{
+                    color: f.color('white');
+                }
+            }
+            &:nth-child(2){
+                display: flex;
+                align-items: flex-end;
+            }
+        }
+    }
+}
+
+@media(max-width: f.breakpoints('ipad-big')){
+    .footer{
+        padding: 40px 10px;
+        .container{
+            img{
+                max-width: 150px;
+                width: 90%;
+            }
+            div{
+                ul{
+
+                    font-size: 1.4rem;
+                }
+                &:nth-child(2){
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

@@ -13,6 +13,24 @@ const Nav = (()=>{
     }
 
     /*
+    *Cliq items
+    */
+   const _NavStateItems = ()=>{
+        const getAllItemsNav = document.querySelectorAll<HTMLElement>('.header nav a');
+        const getNav = document.querySelector<HTMLElement>('.header nav');
+
+        getAllItemsNav.forEach((data: any)=>{
+            data.addEventListener('click', ()=>{
+                getNav?.classList.remove('active');
+                getAllItemsNav.forEach((nestedData: any)=>{
+                    nestedData.classList.remove('active');
+                });
+                data.classList.add('active');
+            });
+        });
+   }
+
+    /*
     *Efect scroll menu
     */
     const _NavScrollEfect = ()=>{
@@ -25,12 +43,25 @@ const Nav = (()=>{
     }
 
     /*
+    /Loader NAv
+    */
+   const _NavLoader = ()=>{
+        const getLoader = document.querySelector('.loader');
+
+        setTimeout(()=>{
+            getLoader?.classList.remove('active');
+        },1000);
+   }
+
+    /*
     *Return childs functions
     */
     return{
         setHandleEvent: function(){
             try { _NavHamburger(); } catch (error) { }
             try { _NavScrollEfect(); } catch (error) { }
+            try { _NavStateItems(); } catch (error) { }
+            try { _NavLoader(); } catch (error) { }
         }
     }
 })();
